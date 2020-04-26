@@ -32,3 +32,10 @@ jobs:
         [Ss]rc/*/*.csproj
       testProjects: |
         [Tt]est/*/*.csproj
+    independantRuntime:
+      arguments:  '-p:NoNetFramework=false'
+      pool:
+        vmImage:  windows-latest
+    windowsRuntime: ${{ variables.null }}
+    linuxRuntime: ${{ variables.null }}
+    macRuntime: ${{ variables.null }}
