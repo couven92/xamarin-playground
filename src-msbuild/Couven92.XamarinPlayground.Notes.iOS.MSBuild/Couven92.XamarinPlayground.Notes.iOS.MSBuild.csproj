@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,9 +9,9 @@
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Couven92.XamarinPlayground.Notes.iOS</RootNamespace>
+    <RootNamespace>Couven92.XamarinPlayground.Notes.iOSMSBuild</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Couven92.XamarinPlayground.Notes.iOS</AssemblyName>
+    <AssemblyName>Couven92.XamarinPlayground.Notes.iOSMSBuild</AssemblyName>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <ProvisioningType>automatic</ProvisioningType>
@@ -128,7 +128,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Couven92.XamarinPlayground.Notes\Couven92.XamarinPlayground.Notes.csproj">
+    <ProjectReference Include="..\..\src\Couven92.XamarinPlayground.Notes\Couven92.XamarinPlayground.Notes.csproj">
       <Project>{0209E883-AFF7-4883-98C3-7E7F5E50E062}</Project>
       <Name>Couven92.XamarinPlayground.Notes</Name>
     </ProjectReference>

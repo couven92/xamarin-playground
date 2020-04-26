@@ -7,8 +7,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Couven92.XamarinPlayground.Notes.Droid</RootNamespace>
-    <AssemblyName>Couven92.XamarinPlayground.Notes.Android</AssemblyName>
+    <RootNamespace>Couven92.XamarinPlayground.Notes.DroidMSBuild</RootNamespace>
+    <AssemblyName>Couven92.XamarinPlayground.Notes.AndroidMSBuild</AssemblyName>
     <Deterministic>True</Deterministic>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -24,7 +24,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
     <Optimize>false</Optimize>
@@ -89,7 +89,7 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Couven92.XamarinPlayground.Notes\Couven92.XamarinPlayground.Notes.csproj">
+    <ProjectReference Include="..\..\src\Couven92.XamarinPlayground.Notes\Couven92.XamarinPlayground.Notes.csproj">
       <Project>{0209E883-AFF7-4883-98C3-7E7F5E50E062}</Project>
       <Name>Couven92.XamarinPlayground.Notes</Name>
     </ProjectReference>
