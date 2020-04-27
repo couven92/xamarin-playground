@@ -13,7 +13,6 @@ resources:
     type:       github
     name:       thnetii/azure-pipelines
     endpoint:   couven92
-    ref:        refs/heads/msbuild-template
 jobs:
 - template: templates/dotnetcore/azure-pipelines.yml@templates
   parameters:
