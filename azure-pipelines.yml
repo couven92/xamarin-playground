@@ -40,55 +40,50 @@ jobs:
     checkout:
     - checkout:   self
       submodules: true
+    common:
+      allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
+      srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
+    publish:
+      skip:         true
+    test:
+      skip:         true
+    defaultPlatform:
+      id:           android
+      displayName:  Android
+      condition:    ne(variables['SkipAndroidRuntime'], 'true')
+    debugConfiguration:
+      displayName:  'MSBuild: Debug'
+    releaseConfiguration:
+      displayName:  'MSBuild: Release'
+- template: templates/msbuild/azure-pipelines.yml@templates
+  parameters:
+    checkout:
+    - checkout:   self
+      submodules: true
+    common:
+      allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+      srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+    pack:
+      skip:         true
+    publish:
+      arguments:    /p:UapAppxPackageBuildMode=CI /p:AppxBundle=Always
+    test:
+      skip:         true
     defaultPlatform: ${{ variables.null }}
     debugConfiguration:
       displayName:  'MSBuild: Debug'
     releaseConfiguration:
       displayName:  'MSBuild: Release'
     platforms:
-    - id:           android
-      displayName:  Android
-      argValue:     Any CPU
-      common:
-        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
-        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
-      publish:
-        skip:         true
-      test:
-        skip:         true
     - id:           uwpArm
       displayName:  'UWP: ARM'
       argValue:     ARM
-      common:
-        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
-        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
-      pack:
-        skip:         true
-      publish:
-        arguments:    /p:UapAppxPackageBuildMode=CI /p:AppxBundle=Always
-      test:
-        skip:         true
-    - id:           uwpX64
+      condition:    ne(variables['SkipUwpArmRuntime'], 'true')
+    - id:           uwpx64
       displayName:  'UWP: x64'
       argValue:     x64
-      common:
-        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
-        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
-      pack:
-        skip:         true
-      publish:
-        arguments:    /p:UapAppxPackageBuildMode=CI /p:AppxBundle=Always
-      test:
-        skip:         true
-    - id:           uwpX86
+      condition:    ne(variables['SkipUwpx64Runtime'], 'true')
+    - id:           uwpx86
       displayName:  'UWP: x86'
       argValue:     x86
-      common:
-        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
-        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
-      pack:
-        skip:         true
-      publish:
-        arguments:    /p:UapAppxPackageBuildMode=CI /p:AppxBundle=Always
-      test:
-        skip:         true
+      condition:    ne(variables['SkipUwpx86Runtime'], 'true')
