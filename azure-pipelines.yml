@@ -60,9 +60,13 @@ jobs:
     - id:           iphone
       displayName:  iPhone
       argValue:     iPhone
+      pool:
+        vmImage:    macOS-latest
     - id:           iphonesimulator
       displayName:  iPhoneSimulator
       argValue:     iPhoneSimulator
+      pool:
+        vmImage:    macOS-latest
     - id:           x64
       displayName:  x64
       argValue:     x64
