@@ -92,6 +92,8 @@ jobs:
     checkout:
     - checkout:   self
       submodules: true
+    defaultPool:
+      vmImage:      macOS-latest
     common:
       allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
       srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
