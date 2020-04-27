@@ -13,10 +13,6 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <OutputPath>$(BaseOutputPath)$(Configuration)\xamarin-android\</OutputPath>
-  </PropertyGroup>
-
-  <PropertyGroup>
     <Deterministic>True</Deterministic>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>$(IntermediateOutputPath)Resources\Resource.designer.cs</AndroidResgenFile>
