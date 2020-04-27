@@ -43,6 +43,8 @@ jobs:
       submodules: true
     common:
       srcProjects:  '*.sln'
+    pack:
+      skip:         true
     defaultPlatform: ${{ variables.null }}
     debugConfiguration:
       displayName:  'MSBuild: Debug'
