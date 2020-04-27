@@ -42,10 +42,12 @@ jobs:
     - checkout:   self
       submodules: true
     common:
-      srcProjects: |
-        src/*/*.csproj
-        src-msbuild/*/*.csproj
+      srcProjects:  '*.sln'
     defaultPlatform: ${{ variables.null }}
+    debugConfiguration:
+      displayName:  'MSBuild: Debug'
+    releaseConfiguration:
+      displayName:  'MSBuild: Release'
     platforms:
     - id:           anycpu
       displayName:  Any CPU
