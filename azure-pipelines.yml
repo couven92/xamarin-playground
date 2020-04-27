@@ -64,6 +64,8 @@ jobs:
         srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
       pack:
         skip:         true
+      publish:
+        arguments:    /p:UapAppxPackageBuildMode=CI /p:AppxBundle=Always
       test:
         skip:         true
     - id:           uwpX64
@@ -74,6 +76,8 @@ jobs:
         srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
       pack:
         skip:         true
+      publish:
+        arguments:    /p:UapAppxPackageBuildMode=CI /p:AppxBundle=Always
       test:
         skip:         true
     - id:           uwpX86
@@ -84,5 +88,7 @@ jobs:
         srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
       pack:
         skip:         true
+      publish:
+        arguments:    /p:UapAppxPackageBuildMode=CI /p:AppxBundle=Always
       test:
         skip:         true
