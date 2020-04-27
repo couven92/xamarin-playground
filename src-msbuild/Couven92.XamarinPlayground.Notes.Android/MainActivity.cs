@@ -4,8 +4,6 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 
-using Couven92.XamarinPlayground.Notes.DroidMSBuild;
-
 namespace Couven92.XamarinPlayground.Notes.Droid
 {
     [Activity(Label = "Couven92.XamarinPlayground.Notes", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

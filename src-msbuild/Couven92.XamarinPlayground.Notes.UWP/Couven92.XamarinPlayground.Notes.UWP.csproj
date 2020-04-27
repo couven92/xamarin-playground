@@ -7,8 +7,8 @@
     <ProjectGuid>{76A53F58-82B9-41E0-9743-902F51EA5F1C}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Couven92.XamarinPlayground.Notes.UWPMSBuild</RootNamespace>
-    <AssemblyName>Couven92.XamarinPlayground.Notes.UWPMSBuild</AssemblyName>
+    <RootNamespace>Couven92.XamarinPlayground.Notes.UWP</RootNamespace>
+    <AssemblyName>Couven92.XamarinPlayground.Notes.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
