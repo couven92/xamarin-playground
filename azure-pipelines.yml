@@ -87,3 +87,31 @@ jobs:
       displayName:  'UWP: x86'
       argValue:     x86
       condition:    and(ne(variables['SkipUwpx86Platform'], 'true'), ne(variables['SkipUwpPlatforms'], 'true'))
+- template: templates/msbuild/azure-pipelines.yml@templates
+  parameters:
+    checkout:
+    - checkout:   self
+      submodules: true
+    common:
+      allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
+      srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
+    pack:
+      skip:         true
+    publish:
+      arguments:    /p:BuildIpa=true
+    test:
+      skip:         true
+    defaultPlatform:  ${{ variables.null }}
+    platforms:
+    - id:           iPhone
+      displayName:  iPhone
+      argValue:     iPhone
+      condition:    ne(variables['SkipIPhonePlatform'], 'true')
+    - id:           iPhoneSimulator
+      displayName:  iPhone Simulator
+      argValue:     iPhoneSimulator
+      condition:    ne(variables['SkipIPhonePlatform'], 'true')
+    debugConfiguration:
+      displayName:  'MSBuild: Debug'
+    releaseConfiguration:
+      displayName:  'MSBuild: Release'
