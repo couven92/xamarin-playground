@@ -50,7 +50,7 @@ jobs:
     defaultPlatform:
       id:           android
       displayName:  Android
-      condition:    ne(variables['SkipAndroidRuntime'], 'true')
+      condition:    ne(variables['SkipAndroidPlatform'], 'true')
     debugConfiguration:
       displayName:  'MSBuild: Debug'
     releaseConfiguration:
@@ -78,12 +78,12 @@ jobs:
     - id:           uwpArm
       displayName:  'UWP: ARM'
       argValue:     ARM
-      condition:    ne(variables['SkipUwpArmRuntime'], 'true')
+      condition:    and(ne(variables['SkipUwpArmPlatform'], 'true'), ne(variables['SkipUwpPlatforms'], 'true'))
     - id:           uwpx64
       displayName:  'UWP: x64'
       argValue:     x64
-      condition:    ne(variables['SkipUwpx64Runtime'], 'true')
+      condition:    and(ne(variables['SkipUwpx64Platform'], 'true'), ne(variables['SkipUwpPlatforms'], 'true'))
     - id:           uwpx86
       displayName:  'UWP: x86'
       argValue:     x86
-      condition:    ne(variables['SkipUwpx86Runtime'], 'true')
+      condition:    and(ne(variables['SkipUwpx86Platform'], 'true'), ne(variables['SkipUwpPlatforms'], 'true'))
