@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current">
   <PropertyGroup>
+    <ImportDirectoryBuildProps>false</ImportDirectoryBuildProps>
+  </PropertyGroup>
+  <Import Project="Directory.Build.props" />
+  
+  <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>Couven92.XamarinPlayground.Notes.Droid</RootNamespace>
     <AssemblyName>Couven92.XamarinPlayground.Notes.Android</AssemblyName>
