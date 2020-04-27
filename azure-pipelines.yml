@@ -53,12 +53,3 @@ jobs:
     - id:           anycpu
       displayName:  Any CPU
       argValue:     Any CPU
-    - id:           arm
-      displayName:  ARM
-      argValue:     ARM
-    - id:           x64
-      displayName:  x64
-      argValue:     x64
-    - id:           x86
-      displayName:  x86
-      argValue:     x86
