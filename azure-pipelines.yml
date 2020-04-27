@@ -40,23 +40,49 @@ jobs:
     checkout:
     - checkout:   self
       submodules: true
-    common:
-      srcProjects:  '*.sln'
     defaultPlatform: ${{ variables.null }}
     debugConfiguration:
       displayName:  'MSBuild: Debug'
     releaseConfiguration:
       displayName:  'MSBuild: Release'
     platforms:
-    - id:           anycpu
-      displayName:  Any CPU
+    - id:           android
+      displayName:  Android
       argValue:     Any CPU
-    - id:           ARM
-      displayName:  ARM
+      common:
+        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
+        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
+      publish:
+        skip:         true
+      test:
+        skip:         true
+    - id:           uwpArm
+      displayName:  'UWP: ARM'
       argValue:     ARM
-    - id:           x64
-      displayName:  x64
+      common:
+        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+      pack:
+        skip:         true
+      test:
+        skip:         true
+    - id:           uwpX64
+      displayName:  'UWP: x64'
       argValue:     x64
-    - id:           x86
-      displayName:  x86
+      common:
+        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+      pack:
+        skip:         true
+      test:
+        skip:         true
+    - id:           uwpX86
+      displayName:  'UWP: x86'
       argValue:     x86
+      common:
+        allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+        srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+      pack:
+        skip:         true
+      test:
+        skip:         true
