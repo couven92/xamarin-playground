@@ -106,11 +106,11 @@ jobs:
     - id:           iPhone
       displayName:  iPhone
       argValue:     iPhone
-      condition:    ne(variables['SkipIPhonePlatform'], 'true')
+      condition:    and(ne(variables['SkipIPhonePlatform'], 'true'), ne(variables['SkipIPhonePlatforms'], 'true'))
     - id:           iPhoneSimulator
       displayName:  iPhone Simulator
       argValue:     iPhoneSimulator
-      condition:    ne(variables['SkipIPhonePlatform'], 'true')
+      condition:    and(ne(variables['SkipIPhoneSimulatorPlatform'], 'true'), ne(variables['SkipIPhonePlatforms'], 'true'))
     debugConfiguration:
       displayName:  'MSBuild: Debug'
     releaseConfiguration:
