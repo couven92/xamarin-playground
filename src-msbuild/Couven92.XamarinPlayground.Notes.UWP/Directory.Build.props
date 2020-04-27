@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
   </PropertyGroup>
-  
+
   <Import Condition="
     '$(MSBuildThisFile)'=='Directory.Build.props'
     and
@@ -52,8 +52,8 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <OutputPath>$(BaseOutputPath)$(Configuration)\$(TargetPlatformIdentifier)$(TargetPlatformVersion)\$(PlatformTarget)\</OutputPath>
+  <PropertyGroup Condition=" '$(PublishDir)' != '' ">
+    <AppxPackageDir>$([MSBuild]::EnsureTrailingSlash('$(PublishDir)'))</AppxPackageDir>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
