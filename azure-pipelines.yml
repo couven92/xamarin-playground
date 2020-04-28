@@ -105,6 +105,7 @@ jobs:
     common:
       allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
       srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
+      addArguments: '/p:Codesignkey="$(APPLE_CERTIFICATE_SIGNING_IDENTITY)"'
     pack:
       skip:         true
     publish:
