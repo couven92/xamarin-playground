@@ -99,7 +99,7 @@ jobs:
       displayName:  Install Apple Developer Certificate
       inputs:
         certSecureFile: Couven92.XamarinPlayground.Notes.iOS.p12
-        certPwd: '$(Couven92.XamarinPlayground.Notes.iOS.password)'
+        certPwd:        '$(Couven92.XamarinPlayground.Notes.iOS.password)'
     defaultPool:
       vmImage:      macOS-latest
     common:
