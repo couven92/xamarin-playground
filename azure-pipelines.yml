@@ -105,7 +105,7 @@ jobs:
     common:
       allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
       srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
-      addArguments: '/p:Codesignkey="$(APPLE_CERTIFICATE_SIGNING_IDENTITY)"'
+      addArguments: '/p:Codesignkey=com.github.couven92'
     pack:
       skip:         true
     publish:
@@ -117,11 +117,11 @@ jobs:
     - id:           iPhone
       displayName:  iPhone
       argValue:     iPhone
-      condition:    and(ne(variables['SkipIPhonePlatform'], 'true'), ne(variables['SkipIPhonePlatforms'], 'true'))
+      condition:    and(ne(variables['SkipiPhonePlatform'], 'true'), ne(variables['SkipiOSPlatforms'], 'true'))
     - id:           iPhoneSimulator
       displayName:  iPhone Simulator
       argValue:     iPhoneSimulator
-      condition:    and(ne(variables['SkipIPhoneSimulatorPlatform'], 'true'), ne(variables['SkipIPhonePlatforms'], 'true'))
+      condition:    and(ne(variables['SkipiPhoneSimulatorPlatform'], 'true'), ne(variables['SkipiOSPlatforms'], 'true'))
     debugConfiguration:
       displayName:  'MSBuild: Debug'
     releaseConfiguration:
