@@ -13,6 +13,7 @@ resources:
     type:       github
     name:       thnetii/azure-pipelines
     endpoint:   couven92
+    ref:        xamarin-templates
 variables:
 - group:  Couven92.XamarinPlayground.Notes.iOS
 jobs:
@@ -37,7 +38,7 @@ jobs:
     windowsRuntime: ${{ variables.null }}
     linuxRuntime: ${{ variables.null }}
     macRuntime: ${{ variables.null }}
-- template: templates/msbuild/azure-pipelines.yml@templates
+- template: templates/xamarin-android/azure-pipelines.yml@templates
   parameters:
     checkout:
     - checkout:   self
@@ -45,18 +46,18 @@ jobs:
     common:
       allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
       srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
-    publish:
-      skip:         true
-    test:
-      skip:         true
-    defaultPlatform:
-      id:           android
-      displayName:  Android
-      condition:    ne(variables['SkipAndroidPlatform'], 'true')
+    restore:
+      msbuildVersionOption:   latest
+    build:
+      msbuildVersionOption:   latest
+    pack:
+      msbuildVersionOption:   latest
     debugConfiguration:
-      displayName:  'MSBuild: Debug'
+      displayName:  'Xamarin Android: Debug'
+      condition:    and(ne(variables['SkipAndroidPlatform'], 'true'), ne(variables['SkipConfigurationDebug'], 'true'))
     releaseConfiguration:
-      displayName:  'MSBuild: Release'
+      displayName:  'Xamarin Android: Release'
+      condition:    and(ne(variables['SkipAndroidPlatform'], 'true'), ne(variables['SkipConfigurationRelease'], 'true'))
 - template: templates/msbuild/azure-pipelines.yml@templates
   parameters:
     checkout:
