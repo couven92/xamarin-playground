@@ -46,6 +46,12 @@ jobs:
     common:
       allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
       srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
+    restore:
+      msbuildVersionOption:   latest
+    build:
+      msbuildVersionOption:   latest
+    pack:
+      msbuildVersionOption:   latest
     debugConfiguration:
       displayName:  'Xamarin Android: Debug'
       condition:    and(ne(variables['SkipAndroidPlatform'], 'true'), ne(variables['SkipConfigurationDebug'], 'true'))
