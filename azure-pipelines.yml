@@ -13,6 +13,8 @@ resources:
     type:       github
     name:       thnetii/azure-pipelines
     endpoint:   couven92
+variables:
+- group:  Couven92.XamarinPlayground.Notes.iOS
 jobs:
 - template: templates/dotnetcore/azure-pipelines.yml@templates
   parameters:
@@ -92,6 +94,12 @@ jobs:
     checkout:
     - checkout:   self
       submodules: true
+    presteps:
+    - task: InstallAppleCertificate@2
+      displayName:  Install Apple Developer Certificate
+      inputs:
+        certSecureFile: Couven92.XamarinPlayground.Notes.iOS.p12
+        certPwd: '$(Couven92.XamarinPlayground.Notes.iOS.password)'
     defaultPool:
       vmImage:      macOS-latest
     common:
