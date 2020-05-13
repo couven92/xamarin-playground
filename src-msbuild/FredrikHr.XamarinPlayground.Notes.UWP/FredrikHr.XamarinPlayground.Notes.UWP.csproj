@@ -4,8 +4,8 @@
   <PropertyGroup>
     <ProjectGuid>{76A53F58-82B9-41E0-9743-902F51EA5F1C}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
-    <RootNamespace>Couven92.XamarinPlayground.Notes.UWP</RootNamespace>
-    <AssemblyName>Couven92.XamarinPlayground.Notes.UWP</AssemblyName>
+    <RootNamespace>FredrikHr.XamarinPlayground.Notes.UWP</RootNamespace>
+    <AssemblyName>FredrikHr.XamarinPlayground.Notes.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
   </PropertyGroup>
   <ItemGroup>
@@ -14,7 +14,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Couven92.XamarinPlayground.Notes\Couven92.XamarinPlayground.Notes.csproj" />
+    <ProjectReference Include="..\..\src\FredrikHr.XamarinPlayground.Notes\FredrikHr.XamarinPlayground.Notes.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

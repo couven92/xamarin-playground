@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Couven92.XamarinPlayground.Notes.iOS
+namespace FredrikHr.XamarinPlayground.Notes.iOS
 {
     public class Application
     {

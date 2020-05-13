@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Couven92.XamarinPlayground.Notes.UWP
+namespace FredrikHr.XamarinPlayground.Notes.UWP
 {
     public sealed partial class MainPage
     {
@@ -21,7 +21,7 @@ namespace Couven92.XamarinPlayground.Notes.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new Couven92.XamarinPlayground.Notes.App());
+            LoadApplication(new FredrikHr.XamarinPlayground.Notes.App());
         }
     }
 }

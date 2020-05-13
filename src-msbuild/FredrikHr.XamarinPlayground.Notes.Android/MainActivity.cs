@@ -4,9 +4,9 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 
-namespace Couven92.XamarinPlayground.Notes.Droid
+namespace FredrikHr.XamarinPlayground.Notes.Droid
 {
-    [Activity(Label = "Couven92.XamarinPlayground.Notes", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "FredrikHr.XamarinPlayground.Notes", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

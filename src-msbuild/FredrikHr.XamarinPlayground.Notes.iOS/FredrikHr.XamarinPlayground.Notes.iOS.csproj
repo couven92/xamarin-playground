@@ -2,8 +2,8 @@
 <Project ToolsVersion="Current">
   <PropertyGroup>
     <OutputType>exe</OutputType>
-    <RootNamespace>Couven92.XamarinPlayground.Notes.iOS</RootNamespace>
-    <AssemblyName>Couven92.XamarinPlayground.Notes.iOS</AssemblyName>
+    <RootNamespace>FredrikHr.XamarinPlayground.Notes.iOS</RootNamespace>
+    <AssemblyName>FredrikHr.XamarinPlayground.Notes.iOS</AssemblyName>
     <ProvisioningType>automatic</ProvisioningType>
     <ProjectGuid>{0D598D89-C43D-4CA2-9F99-4E07E70F474C}</ProjectGuid>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Couven92.XamarinPlayground.Notes\Couven92.XamarinPlayground.Notes.csproj" />
+    <ProjectReference Include="..\..\src\FredrikHr.XamarinPlayground.Notes\FredrikHr.XamarinPlayground.Notes.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Couven92.XamarinPlayground.Notes
+namespace FredrikHr.XamarinPlayground.Notes
 {
     public partial class App : Application
     {

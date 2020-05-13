@@ -14,7 +14,7 @@ resources:
     name:       thnetii/azure-pipelines
     endpoint:   couven92
 variables:
-- group:  Couven92.XamarinPlayground.Notes.iOS
+- group:  FredrikHr.XamarinPlayground.Notes.iOS
 jobs:
 - template: templates/dotnetcore/azure-pipelines.yml@templates
   parameters:
@@ -43,8 +43,8 @@ jobs:
     - checkout:   self
       submodules: true
     common:
-      allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
-      srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.Android/*.csproj
+      allProjects:  src-msbuild/FredrikHr.XamarinPlayground.Notes.Android/*.csproj
+      srcProjects:  src-msbuild/FredrikHr.XamarinPlayground.Notes.Android/*.csproj
     publish:
       skip:         true
     test:
@@ -63,8 +63,8 @@ jobs:
     - checkout:   self
       submodules: true
     common:
-      allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
-      srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.UWP/*.csproj
+      allProjects:  src-msbuild/FredrikHr.XamarinPlayground.Notes.UWP/*.csproj
+      srcProjects:  src-msbuild/FredrikHr.XamarinPlayground.Notes.UWP/*.csproj
     pack:
       skip:         true
     publish:
@@ -98,14 +98,14 @@ jobs:
     - task: InstallAppleCertificate@2
       displayName:  Install Apple Developer Certificate
       inputs:
-        certSecureFile: Couven92.XamarinPlayground.Notes.iOS.p12
-        certPwd:        '$(Couven92.XamarinPlayground.Notes.iOS.password)'
+        certSecureFile: FredrikHr.XamarinPlayground.Notes.iOS.p12
+        certPwd:        '$(FredrikHr.XamarinPlayground.Notes.iOS.password)'
     defaultPool:
       vmImage:      macOS-latest
     common:
-      allProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
-      srcProjects:  src-msbuild/Couven92.XamarinPlayground.Notes.iOS/*.csproj
-      addArguments: '/p:Codesignkey=com.github.couven92'
+      allProjects:  src-msbuild/FredrikHr.XamarinPlayground.Notes.iOS/*.csproj
+      srcProjects:  src-msbuild/FredrikHr.XamarinPlayground.Notes.iOS/*.csproj
+      addArguments: '/p:Codesignkey=com.github.fredrikhr'
     pack:
       skip:         true
     publish:

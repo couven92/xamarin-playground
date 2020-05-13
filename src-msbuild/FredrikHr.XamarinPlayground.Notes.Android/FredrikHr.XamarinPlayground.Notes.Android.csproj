@@ -7,8 +7,8 @@
   <Import Project="Directory.Build.props" />
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <RootNamespace>Couven92.XamarinPlayground.Notes.Droid</RootNamespace>
-    <AssemblyName>Couven92.XamarinPlayground.Notes.Android</AssemblyName>
+    <RootNamespace>FredrikHr.XamarinPlayground.Notes.Droid</RootNamespace>
+    <AssemblyName>FredrikHr.XamarinPlayground.Notes.Android</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -24,7 +24,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Couven92.XamarinPlayground.Notes\Couven92.XamarinPlayground.Notes.csproj" />
+    <ProjectReference Include="..\..\src\FredrikHr.XamarinPlayground.Notes\FredrikHr.XamarinPlayground.Notes.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
