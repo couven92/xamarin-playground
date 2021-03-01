@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Platforms>x86;x64;ARM;ARM64</Platforms>
+    <Platform Condition=" '$(Platform)'=='' or '$(Platform)' == 'AnyCPU' ">x64</Platform>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LangVersion>9</LangVersion>
+    <OutputType>AppContainerExe</OutputType>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>uap10.0.18362.0</TargetFramework>
+    <NugetTargetMoniker>UAP,Version=v10.0.18362</NugetTargetMoniker>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <TargetFrameworkIdentifier>.NETCore</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <DefineConstants>$(DefineConstants);NETFX_CORE;WINDOWS_UWP</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RuntimeIdentifier>win10</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <RuntimeIdentifier>win10-x86</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'ARM' ">
+    <RuntimeIdentifier>win10-arm</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'ARM64' ">
+    <RuntimeIdentifier>win10-arm64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>pdbonly</DebugType>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+
+  <!--
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform " Version="6.2.12" />
+  </ItemGroup>
+  -->
+
+  <ItemGroup>
+    <ProjectReference Include="..\FredrikHr.XamarinPlayground.AppSample.SharedLibrary\FredrikHr.XamarinPlayground.AppSample.SharedLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\**\*.*" />
+    <Content Include="Properties\Default.rd.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="**\*.xaml" />
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LanguageTargets>$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets;$(MSBuildExtensionsPath)\Microsoft\NuGet\$(VisualStudioVersion)\Microsoft.NuGet.targets</LanguageTargets>
+  </PropertyGroup>
+
+</Project>

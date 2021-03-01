@@ -3,8 +3,10 @@
   <PropertyGroup Label="BasePath">
     <BaseOutputPath>$(MSBuildThisFileDirectory)bin\$(MSBuildProjectName)\</BaseOutputPath>
     <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <AppxPackageDir>$(MSBuildThisFileDirectory)AppPackages</AppxPackageDir>
+    <PlatformSpecificBundleArtifactsListDir>$(MSBuildThisFileDirectory)BundleArtifacts</PlatformSpecificBundleArtifactsListDir>
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
