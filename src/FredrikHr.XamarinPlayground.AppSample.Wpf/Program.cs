@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using FredrikHr.XamarinPlayground.AppSample.SharedLibrary;
 
@@ -11,7 +7,7 @@ using Xamarin.Forms.Platform.WPF;
 
 namespace FredrikHr.XamarinPlayground.AppSample.Wpf
 {
-   public static class Program
+    public static class Program
    {
        [STAThread]
        public static int Main()
